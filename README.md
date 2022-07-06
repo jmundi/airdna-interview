@@ -10,27 +10,27 @@
    git clone https://github.com/jmundi/interview-airdna
 
 4. **SBT Clean**
-   cd interview-dna
+   cd interview-airdna
    sbt clean
    sbt assembly
   
-5. **Copy generated jar files to base directory.**
+5. **Copy generated jar file "interview-airdna-assembly-0.1.jar "from target directory to interview directory.**
 
-6. **Run the following shell command for Ingestion:**
+6. **From Interview directory, run the following shell command for Ingestion:**
    $SPARK_HOME/bin/spark-submit \
    --master local \
    --deploy-mode client \
    --class org.interview.airdna.IngestJob \
    interview-airdna-assembly-0.1.jar amenities.txt properties.json
 
-7. **Run the following shell command for Reporting:**
+7. **From Interview directory, run the following shell command for Reporting:**
    $SPARK_HOME/bin/spark-submit \
    --master local \
    --deploy-mode client \
    --class org.interview.airdna.IngestAudit \
    interview-airdna-assembly-0.1.jar
 
-8. **Run the following shell command for Reporting:**
+8. **From Interview directory, run the following shell command for Reporting:**
    $SPARK_HOME/bin/spark-submit \
    --master local \
    --deploy-mode client \
