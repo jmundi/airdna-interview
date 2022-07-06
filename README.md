@@ -10,16 +10,13 @@
 
 4. **Clone Repository**
    
-   `cd interview 
-
-   git clone [https://github.com/jmundi/interview-airdna]`
+   `cd interview`
+   `git clone [https://github.com/jmundi/interview-airdna]`
 
 5. **SBT Clean**
    
-   `cd interview-airdna 
-   
+   `cd interview-airdna
    sbt clean
-   
    sbt assembly`
   
 7. **Copy generated jar file "interview-airdna-assembly-0.1.jar "from target directory to interview directory.**
