@@ -5,16 +5,17 @@
 2. **Create Base Folder**
    
    mkdir interview
-   **copy amenities.txt and properties.json to this directory**
 
-3. **Clone Repository**
+3. **Copy amenities.txt and properties.json to this directory**
+
+4. **Clone Repository**
    
-   cd interview
+   cd interview 
    git clone https://github.com/jmundi/interview-airdna
 
-4. **SBT Clean**
+5. **SBT Clean**
    
-   cd interview-airdna
+   cd interview-airdna 
    sbt clean
    sbt assembly
   
