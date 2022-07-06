@@ -17,6 +17,7 @@
 5. **Copy generated jar file "interview-airdna-assembly-0.1.jar "from target directory to interview directory.**
 
 6. **From Interview directory, run the following shell command for Ingestion:**
+   
    $SPARK_HOME/bin/spark-submit \
    --master local \
    --deploy-mode client \
@@ -24,6 +25,7 @@
    interview-airdna-assembly-0.1.jar amenities.txt properties.json
 
 7. **From Interview directory, run the following shell command for Reporting:**
+   
    $SPARK_HOME/bin/spark-submit \
    --master local \
    --deploy-mode client \
@@ -31,6 +33,7 @@
    interview-airdna-assembly-0.1.jar
 
 8. **From Interview directory, run the following shell command for Reporting:**
+   
    $SPARK_HOME/bin/spark-submit \
    --master local \
    --deploy-mode client \
