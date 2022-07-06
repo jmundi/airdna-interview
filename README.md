@@ -1,49 +1,49 @@
 1. **Set your SPARK_HOME.Version of Spark should be 3.2.0**
    
-   export SPARK_HOME="/path/to/spark"
+   `export SPARK_HOME="/path/to/spark"`
 
 2. **Create Base Folder**
    
-   mkdir interview
+   `mkdir interview`
 
 3. **Copy amenities.txt and properties.json to this directory**
 
 4. **Clone Repository**
    
-   cd interview 
+   `cd interview 
 
-   git clone https://github.com/jmundi/interview-airdna
+   git clone [https://github.com/jmundi/interview-airdna]`
 
 5. **SBT Clean**
    
-   cd interview-airdna 
+   `cd interview-airdna 
    
    sbt clean
    
-   sbt assembly
+   sbt assembly`
   
 7. **Copy generated jar file "interview-airdna-assembly-0.1.jar "from target directory to interview directory.**
 
 8. **From Interview directory, run the following shell command for Ingestion:**
    
-   $SPARK_HOME/bin/spark-submit \
+   `$SPARK_HOME/bin/spark-submit \
    --master local \
    --deploy-mode client \
    --class org.interview.airdna.IngestJob \
-   interview-airdna-assembly-0.1.jar amenities.txt properties.json
+   interview-airdna-assembly-0.1.jar amenities.txt properties.json`
 
 9. **From Interview directory, run the following shell command for Reporting:**
    
-   $SPARK_HOME/bin/spark-submit \
+   `$SPARK_HOME/bin/spark-submit \
    --master local \
    --deploy-mode client \
    --class org.interview.airdna.IngestAudit \
-   interview-airdna-assembly-0.1.jar
+   interview-airdna-assembly-0.1.jar`
 
 10. **From Interview directory, run the following shell command for Reporting:**
    
-    $SPARK_HOME/bin/spark-submit \
+    `$SPARK_HOME/bin/spark-submit \
     --master local \
     --deploy-mode client \
     --class org.interview.airdna.ExportJob \
-    interview-airdna-assembly-0.1.jar
+    interview-airdna-assembly-0.1.jar`
