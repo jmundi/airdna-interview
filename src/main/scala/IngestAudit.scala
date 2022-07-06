@@ -2,7 +2,6 @@ package org.interview.airdna
 import com.amazon.deequ.{VerificationResult, VerificationSuite}
 import com.amazon.deequ.checks.{Check, CheckLevel, CheckStatus}
 import com.amazon.deequ.constraints.ConstraintStatus
-import org.apache.spark
 import org.apache.spark.sql.SparkSession
 
 object IngestAudit {
