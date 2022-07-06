@@ -5,31 +5,32 @@
    mkdir interview
    **copy amenities.txt and properties.json to this directory**
 
-4. **Clone Repository**
+3. **Clone Repository**
    cd interview
    git clone https://github.com/jmundi/interview-airdna
 
-5. **SBT Clean**
+4. **SBT Clean**
    cd interview-dna
    sbt clean
    sbt assembly
-   Copy jar files to base directory.
+  
+5. **Copy generated jar files to base directory.**
 
-6. Run the following shell command for Ingestion:
+6. **Run the following shell command for Ingestion:**
    $SPARK_HOME/bin/spark-submit \
    --master local \
    --deploy-mode client \
    --class org.interview.airdna.IngestJob \
    interview-airdna-assembly-0.1.jar amenities.txt properties.json
 
-7. Run the following shell command for Reporting:
+7. **Run the following shell command for Reporting:**
    $SPARK_HOME/bin/spark-submit \
    --master local \
    --deploy-mode client \
    --class org.interview.airdna.IngestAudit \
    interview-airdna-assembly-0.1.jar
 
-8. Run the following shell command for Reporting:
+8. **Run the following shell command for Reporting:**
    $SPARK_HOME/bin/spark-submit \
    --master local \
    --deploy-mode client \
